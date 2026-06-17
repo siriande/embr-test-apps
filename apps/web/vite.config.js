@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react';
 // which Embr uploads to the CDN. Assets land in dist/assets/ (auto-detected as immutable).
 export default defineConfig({
   plugins: [react()],
+  build: {
+     outDir: 'build',   // non-standard: 'build/assets' is NOT in the legacy hardcoded list
+   },
 });
